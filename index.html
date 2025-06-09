@@ -16,11 +16,18 @@
     <script type="text/babel">
       //   Write Your Code Here
       const Welcome = (props) => {
-        console.log(props);
-        return <h1 className="message">Hello, User</h1>;
+        return (
+          <h1 className="message">
+            {props.greeting}, {props.name}
+          </h1>
+        );
       };
+
       ReactDOM.render(
-        <Welcome name="Rahul" greeting="Hello" />,
+        <div>
+          <Welcome name="Srinu" greeting="Hello" />
+          <Welcome name="Git" greeting="Hello" />
+        </div>,
         document.getElementById("root")
       );
     </script>
